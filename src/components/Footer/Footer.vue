@@ -66,6 +66,7 @@
           max-width: 500px;
           margin: 0 auto;
           margin-top: 20px;
+          padding-left: 0;
         }
         padding-left: 50px;
         margin-top: 50px;
