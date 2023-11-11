@@ -4,32 +4,38 @@
       ТОП
       <span>10</span>
     </h2>
-    <Swiper 
-        :modules="modules"
-        navigation
-        class="top-slider"
-        spaceBetween="23"
-        :breakpoints="swiperOptions.breakpoints"
+    <Swiper
+      :navigation="true"
+      :modules="modules"
+      :breakpoints="swiperOptions.breakpoints"
+      :spaceBetween="25"
+      class="top-slider"
+      
     >
-      <SwiperSlide class="top-slider-item" v-for="(item,idx) in top.top" :key="item.id">
-        <router-link :to="'movie/'+item.id" class="main-upcoming-item-next top-slider-item-content">
+      <SwiperSlide
+        class="top-slider-item"
+        v-for="(item, idx) in top.top"
+        :key="item.id"
+      >
+        <RouterLink :to="`movie/${item.id}`" class="top-slider-item-content">
+          <span>{{ idx + 1 }}</span>
           <img :src="imgMini + item.poster_path" alt="" />
-          <div><span>{{idx + 1}}</span></div>
-        </router-link>
+        </RouterLink>
       </SwiperSlide>
     </Swiper>
   </section>
 </template>
+
 <script setup>
 import { imgMini } from "@/url";
-import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { ref, computed } from "vue";
 import "swiper/scss";
 import "swiper/scss/navigation";
+import { Navigation } from "swiper/modules";
+import { ref, onMounted, computed } from "vue";
 const modules = ref([Navigation]);
 const swiperOptions = ref({
-   breakpoints: {
+  breakpoints: {
     320: {
       slidesPerView: 1,
     },

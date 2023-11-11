@@ -9,7 +9,7 @@
     <div class="media-info-content" v-if="media">
       <div class="media-info-content-block">
         <h2>{{ media.title || media.name }}</h2>
-        <p>{{ media.overview || "Неописуемый..." }}</p>
+        <p  maxlength="999">{{ media.overview || "Неописуемый..." }}</p>
         <p class="media-info-content-block-descr">
           <span>{{ new Date(media.release_date || media.first_air_date).getFullYear() }}</span>
           <span>{{getGenres}}</span>

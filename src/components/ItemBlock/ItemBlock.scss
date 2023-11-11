@@ -32,12 +32,21 @@
 
             h2 {
                 font-size: 50px;
+                @include media (640){
+                    font-size: 20px;
+                }
             }
-
+// $p-max-length:10;
             p:first-of-type {
                 font-size: 20px;
                 line-height: 30px;
                 max-width: 935px;
+                @include media (640){
+                    // max-length: $p-max-length;
+                    font-size: 12px;
+                    line-height: 1.4;
+                    max-width: 500px;
+                }
             }
             &-descr {
                 color: rgba(255, 255, 255, 0.60);

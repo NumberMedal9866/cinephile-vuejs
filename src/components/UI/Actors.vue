@@ -25,7 +25,7 @@ const props = defineProps(['actors'])
         gap: 10px;
         border-radius: 25px;
         border: 1px solid #FFF;
-        padding: 2px 15px 2px 2px;
+        padding: 2px 5px 2px 2px;
         span{
             font-size: 16px;
             font-weight: 400;
@@ -33,8 +33,8 @@ const props = defineProps(['actors'])
             margin-left: 0;
         }
         img{
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             object-fit: cover;
         }

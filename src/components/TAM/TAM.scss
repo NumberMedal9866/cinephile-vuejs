@@ -16,7 +16,8 @@
         gap: 10px;
         width: max-content;
         @include media(570){
-            margin-left: 10px;
+            margin-left: 20px;
+            margin-top: 20px;
         }
     }
     &-slider{

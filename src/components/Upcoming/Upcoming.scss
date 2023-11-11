@@ -26,12 +26,22 @@
             justify-content: center;
             text-align: center;
             h1 {
-                font-size: 80px;
+                font-size: 90px;
+                @include media(640){
+                    font-size: 40px;
+                    max-width: 400px;
+                }
             }
             p {
                 font-size: 20px;
                 line-height: 30px;
                 max-width: 960px;
+                @include media (640){
+                    font-size: 20px;
+                    line-height: 1.2;
+                    padding: 0 5px;
+                }
+                
             }
         }
         &-next, &-prev{
