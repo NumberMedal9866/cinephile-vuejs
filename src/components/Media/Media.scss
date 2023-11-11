@@ -48,7 +48,12 @@
     display: flex;justify-content: space-evenly;
     color: white;
     text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 50px 0;
+    @include media (640){
+        padding: 50px 10px;
+    }
     li{
         display: flex;
         flex-direction: column;
@@ -68,9 +73,15 @@
     margin-bottom: 71px;
     font-size: 22px;
     color: white;
+    h2{
+        @include media (640){
+            text-align: center;
+        }
+    }
     &-content{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 10px;
         flex-wrap: wrap;
         margin-top: 30px;
         a{

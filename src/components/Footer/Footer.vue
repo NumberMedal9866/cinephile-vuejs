@@ -62,6 +62,10 @@
         font-size: 20px;
         @media (max-width: 1250px) {
           text-align: center;
+          font-size: 12px;
+          max-width: 500px;
+          margin: 0 auto;
+          margin-top: 20px;
         }
         padding-left: 50px;
         margin-top: 50px;
