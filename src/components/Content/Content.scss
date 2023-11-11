@@ -12,6 +12,9 @@
         flex-wrap: wrap;
         gap: 24px;
         justify-content: start;
+        @include media (640){
+            justify-content: center;
+        }
         a{
             width: 311px;
             position: relative;
